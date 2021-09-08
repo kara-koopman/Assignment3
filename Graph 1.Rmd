@@ -3,6 +3,8 @@ title: "Graph 1"
 author: "Kara"
 date: "9/8/2021"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +18,14 @@ View(beaches)
 ```{r setup, include=FALSE}
 library(ggplot2)
 library(tidyverse)
-p <- ggplot(data=beaches, aes(x= month_name, y=rainfall)) +
-  geom_bar(stat="identity")
+
+str(beaches)
+p <- ggplot(beaches,
+            aes(
+              x= enterococci, 
+              y= rainfall)
+            )+
+  geom_point()
+p
 
 ```
