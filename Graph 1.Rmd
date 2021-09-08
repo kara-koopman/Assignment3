@@ -7,4 +7,6 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
+library(tidyverse)
+beaches <- read_csv("~/Desktop/DS-3001/data/beaches.csv")
+View(beaches)
