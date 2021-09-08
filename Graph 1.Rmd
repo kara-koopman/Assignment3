@@ -10,7 +10,7 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-beaches <- read_csv("C:/Users/Owner/OneDrive/Desktop/DS-3001/data/beaches.csv")
+beaches <- read_csv("~/Desktop/DS3001/DS-3001/data/beaches.csv")
 View(beaches)
 ```
 
@@ -25,7 +25,6 @@ p <- ggplot(beaches,
               x= enterococci, 
               y= rainfall)
             )+
-  geom_point()
+  geom_point() + labs(title="Enterococci Level vs Rainfall", y="Rainfall (inches)", x="Enterococci Level")
 p
-
 ```
