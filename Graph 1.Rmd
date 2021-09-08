@@ -8,5 +8,15 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-beaches <- read_csv("~/Desktop/DS-3001/data/beaches.csv")
+beaches <- read_csv("C:/Users/Owner/OneDrive/Desktop/DS-3001/data/beaches.csv")
 View(beaches)
+```
+
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(tidyverse)
+p <- ggplot(data=beaches, aes(x= month_name, y=rainfall)) +
+  geom_bar(stat="identity")
+
+```
